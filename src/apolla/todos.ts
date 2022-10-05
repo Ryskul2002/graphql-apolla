@@ -10,13 +10,29 @@ export const ALL_TODO = gql`
 `
 
 export const ADD_TODO = gql`
-    mutation AddTodo($title: String!, $task_id: ID!, $isDone: Boolean!, $isChange: Boolean!, $isImportant: Boolean!) {
-        createTodo(title: $title,id: $task_id, isDone: $isDone, isChange: $isChange, isImportant: $isImportant) {
-            id
+    mutation AddTodo($title: String!, $isDone: Boolean!, $isChange: Boolean!, $isImportant: Boolean!) {
+        createTodo(title: $title, isDone: $isDone, isChange: $isChange, isImportant: $isImportant) {
             title
             isDone
             isChange
             isImportant
+        }
+    }
+`
+
+export const DONE_TODO = gql`
+    mutation UpdateTodo($id: ID!, $isDone: Boolean!) {
+        updateTodo(id: $id, isDone: $isDone) {
+            id
+            isDone
+        }
+    }
+`
+
+export const DELETE_TODO = gql`
+    mutation RemoveTodo($id: ID!) {
+        removeTodo(id: $id) {
+            id
         }
     }
 `

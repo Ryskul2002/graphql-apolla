@@ -1,6 +1,10 @@
-import React, {useState} from 'react';
+// External dependencies
 import {Button, Input} from "@chakra-ui/react";
 import {useMutation} from "@apollo/client";
+import React, {useState} from 'react';
+
+
+// Local dependencies
 import {ADD_TODO, ALL_TODO} from "../../apolla/todos";
 
 const AddTodo = () => {
@@ -27,7 +31,6 @@ const AddTodo = () => {
         if (isInput.trim().length) {
             createTodo({
                 variables: {
-                    id: Math.round(Math.random() * 1000),
                     title: isInput,
                     isDone: false,
                     isChange: false,
@@ -35,6 +38,7 @@ const AddTodo = () => {
                 }
             })
         }
+        setInput('')
     }
 
     const onKeyPressAdd = (event: React.KeyboardEvent) => {

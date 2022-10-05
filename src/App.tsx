@@ -5,6 +5,7 @@ import React from 'react';
 // Local dependencies
 import AddTodo from "./components/AddTodo/AddTodo";
 import TodoList from "./components/TodoList/TodoList";
+import './style.css'
 
 function App() {
 
