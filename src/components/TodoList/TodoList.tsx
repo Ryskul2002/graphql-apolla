@@ -1,6 +1,7 @@
-import React from 'react';
-import {Button, ListItem, OrderedList, Spinner} from "@chakra-ui/react";
+// External dependencies
 import {useQuery, useMutation} from "@apollo/client";
+import {Button, ListItem, OrderedList, Spinner} from "@chakra-ui/react";
+import React from "react"
 
 // Local dependencies
 import {ALL_TODO, DELETE_TODO, DONE_TODO} from "../../apolla/todos";

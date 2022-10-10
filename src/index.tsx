@@ -1,11 +1,13 @@
 // External dependencies
-import client from "./apolla/client"
-import App from './App';
 import {ApolloProvider} from '@apollo/client'
 import {ChakraProvider} from '@chakra-ui/react'
 import React from 'react';
 import reportWebVitals from './reportWebVitals';
 import ReactDOM from 'react-dom/client';
+
+// Local dependencies
+import App from './App';
+import client from "./apolla/client"
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement

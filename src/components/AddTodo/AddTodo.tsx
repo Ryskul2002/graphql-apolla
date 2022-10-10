@@ -3,7 +3,6 @@ import {Button, Input} from "@chakra-ui/react";
 import {useMutation} from "@apollo/client";
 import React, {useState} from 'react';
 
-
 // Local dependencies
 import {ADD_TODO, ALL_TODO} from "../../apolla/todos";
 
